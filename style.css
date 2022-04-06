@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.heading-1 {
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+
+.heading-2 {
+  font-weight: 600;
+}
+
+.main {
+  /* padding: 0.7em 35em; */
+  font-weight: 400;
+  font-size: 14px;
+  color: hsl(229, 6%, 66%);
+}
+
+.write-up {
+  /* border: solid 5px; */
+  padding: 2em 0px;
+  margin: 10px;
+  text-align: center;
+
+  /* font-size: 19px; */
+}
+
+.grid-container {
+  /* border: solid 3px blue; */
+  margin: 10px 150px;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.grid-container > * {
+  /* border: solid 1px green; */
+  border-top: solid;
+  padding: 20px;
+  border-radius: 7px;
+  color: hsl(234, 12%, 34%);
+  box-shadow: 0px 13px 20px hsl(231, 65%, 92%);
+}
+
+.box-writeup {
+  color: hsl(229, 6%, 66%);
+  font-size: 13px;
+  padding-right: 24px;
+}
+
+.icons {
+  height: 110px;
+  width: 320px;
+  object-fit: none;
+  object-position: right bottom;
+}
+
+.supervisor {
+  /* grid-area: supervisor; */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  border-top-color: hsl(180, 62%, 55%);
+}
+
+.team-builder {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-top-color: hsl(0, 78%, 62%);
+}
+
+.karma {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  border-top-color: hsl(34, 97%, 64%);
+}
+
+.calculator {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  border-top-color: hsl(212, 86%, 64%);
+}
+
+footer {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 20px;
+  }
+  .supervisor {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .team-builder {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .karma {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .calculator {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  .heading-1,
+  .heading-2 {
+    font-size: 30px;
+  }
+}
